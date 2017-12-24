@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<title>Fourn&eacute;e du jour</title>
+
+<style style="text/css">
+  	.hoverTable{
+		width:70%;
+		border-collapse:collapse;
+    border: 2px solid black;
+    font-family:"Verdana";
+	}
+  .hoverTable th{
+		padding:7px; border:#0A122A 1px solid;
+    background-color: #2E2E2E;
+    align:'center';
+    color:#F8ECE0;
+    font-size: 130%
+	}
+	.hoverTable td{
+		padding:7px; border:#FA58F4 1px solid;
+    text-align: center;
+	}
+	/* Define the default color for all the table rows */
+	.hoverTable tr:nth-child(odd){
+		background: #FBEFFB;
+	}
+  .hoverTable tr:nth-child(even){
+		background: #F8E0F7;
+	}
+	/* Define the hover highlight color for the table row */
+    .hoverTable tr:hover {
+          background-color: #F6CEF5;
+    }
+   /*https://stackoverflow.com/questions/5875931/using-css-to-make-tables-outer-border-color-different-from-cells-border-color*/
+    .hoverTable tr td {
+        border-right: 0;
+    }
+    .hoverTable tr:last-child td {
+        border-bottom: 0;
+    }
+    .hoverTable tr td:first-child, .hoverTable tr th:first-child {
+        border-left: 0;
+        border-right: 0;
+    }
+    /* Wallpaper*/
+    .Degrade {
+      background-image:linear-gradient(#FA58AC, #F5A9E1);
+      background-repeat: round;
+      background-attachment: fixed;
+    }
+
+    /*Photo effects*/
+    .container {
+        position: relative;
+        width: 100%;
+    }
+
+    .image {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      transition: .5s ease;
+      backface-visibility: hidden;
+      /*Ajout PDE : flou pour masquer l'identité des filles représentées */
+      -webkit-filter: blur(2px);
+      -moz-filter: blur(2px);
+      -o-filter: blur(2px);
+      -ms-filter: blur(2px);
+      filter: blur(2px);
+    }
+
+    .middle {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%)
+    }
+
+    .container:hover .image {
+      opacity: 0.3;
+    }
+
+    .container:hover .middle {
+      opacity: 1;
+    }
+
+    .text {
+      background-color: #FA58AC;
+      color: white;
+      font-size: 16px;
+      padding: 16px 32px;
+    }
+</style>
+
+<body class="Degrade">
+<table align='center' class="hoverTable">
+	<tr>
+    <th>PROBA</th>
+    <th>&Acirc;GE</th>
+    <th>TAILLE</th>
+    <th>POIDS</th>
+    <th>VILLE</th>
+    <th width='150px'>PHOTO</th>
+	</tr>
+
+  <tr>
+      <td>0.34</td>
+      <td>21 ans</td>
+      <td>165 cm</td>
+      <td>0 kg</td>
+      <td>Langonnet</td>
+      <td>
+          <div class="container">
+              <a target="_blank" href = './Profils Test/115000169.html'>
+                  <img width='150px' class='image' src='./Profils Test/Photos/115000169.png'/>
+                  <div class="middle"> <div class="text"> Laurianne </div></div>
+              </a>
+          </div>
+      </td>
+  </tr>
+
+  <tr>
+    <td>0.55</td>
+    <td>20 ans</td>
+    <td>165 cm</td>
+    <td>55 kg</td>
+    <td>Meudon</td>
+    <td>
+        <div class="container">
+            <a target="_blank" href = './Profils Test/115000215.html'>
+                <img width='150px' class='image' src='./Profils Test/Photos/115000215.png'/>
+                <div class="middle"> <div class="text"> Unafraid </div></div>
+            </a>
+        </div>
+    </td>
+</tr>
+
+<tr>
+    <td>0.19</td>
+    <td>25 ans</td>
+    <td>170 cm</td>
+    <td>50 kg</td>
+    <td>Clermont-Ferrand</td>
+    <td>
+        <div class="container">
+            <a target="_blank" href = './Profils Test/115000176.html'>
+                <img width='150px' class='image' src='./Profils Test/Photos/115000176.png'/>
+                <div class="middle"> <div class="text"> Bella </div></div>
+            </a>
+        </div>
+    </td>
+</tr>
+
+<tr>
+    <td>0.55</td>
+    <td>22 ans</td>
+    <td>170 cm</td>
+    <td>0 kg</td>
+    <td>Armenti&#232;res</td>
+    <td>
+        <div class="container">
+            <a target="_blank" href = './Profils Test/115000208.html'>
+                <img width='150px' class='image' src='./Profils Test/Photos/115000208.png'/>
+                <div class="middle"> <div class="text"> Lisa </div></div>
+            </a>
+        </div>
+    </td>
+</tr>
+
+<tr>
+    <td>0.46</td>
+    <td>23 ans</td>
+    <td>0 cm</td>
+    <td>0 kg</td>
+    <td>Guer</td>
+    <td>
+        <div class="container">
+            <a target="_blank" href = './Profils Test/115000177.html'>
+                <img width='150px' class='image' src='./Profils Test/Photos/115000177.png'/>
+                <div class="middle"> <div class="text"> Am&#233;lie </div></div>
+            </a>
+        </div>
+    </td>
+</tr>
+
+<tr>
+    <td>0.13</td>
+    <td>25 ans</td>
+    <td>160 cm</td>
+    <td>0 kg</td>
+    <td>Montoir-de-Bretagne</td>
+    <td>
+        <div class="container">
+            <a target="_blank" href = './Profils Test/115000152.html'>
+                <img width='150px' class='image' src='./Profils Test/Photos/115000152.png'/>
+                <div class="middle"> <div class="text"> Littlegirl </div></div>
+            </a>
+        </div>
+    </td>
+</tr>
+
+<tr>
+    <td>0.09</td>
+    <td>21 ans</td>
+    <td>170 cm</td>
+    <td>55 kg</td>
+    <td>Verneuil-sur-Seine</td>
+    <td>
+        <div class="container">
+            <a target="_blank" href = './Profils Test/115000179.html'>
+                <img width='150px' class='image' src='./Profils Test/Photos/115000179.png'/>
+                <div class="middle"> <div class="text"> Camille </div></div>
+            </a>
+        </div>
+    </td>
+</tr>
+
+<tr>
+    <td>0.03</td>
+    <td>23 ans</td>
+    <td>0 cm</td>
+    <td>0 kg</td>
+    <td>Le Beausset</td>
+    <td>
+        <div class="container">
+            <a target="_blank" href = './Profils Test/115000191.html'>
+                <img width='150px' class='image' src='./Profils Test/Photos/115000191.png'/>
+                <div class="middle"> <div class="text"> Ruzzicablandi </div></div>
+            </a>
+        </div>
+    </td>
+</tr>
+</body>

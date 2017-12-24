@@ -1,0 +1,1 @@
+['charmes', 'mails', 'paniers', 'nbFautes', 'age', 'piercing', 'nbMots_description', 'pctFautes', 'long_description', 'tatouage', 'lunettes', 'taille', 'a_redoublé', 'est_de_nuit', 'nb_series_communes', 'label', 'distanceToMe', 'poids', 'IMC', 'accessibilité', 'identifiant']

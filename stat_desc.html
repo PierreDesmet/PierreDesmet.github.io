@@ -1,0 +1,724 @@
+<!DOCTYPE HTML>
+<!--
+	Urban by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<style>
+	.bar1
+	{
+	    line-height: 70px;
+	    height:70px;
+			width:85px;
+	    background-color:#95B4D7;
+	    margin:auto;
+	    margin-left:2px;
+	    text-align:center;
+	    vertical-align: bottom;
+	    display: inline-block;
+	}
+	.bar2
+	{
+	    line-height: 85px;
+			height:85px;
+	    width:85px;
+	    background-color:#5795D2;
+	    margin:auto;
+	    margin-left:2px;
+	    text-align:center;
+	    vertical-align: bottom;
+	    display: inline-block;
+
+	}
+	.bar3
+	{
+	    line-height: 55px;
+			height:55px;
+	    width:85px;
+	    background-color:#A9BCF5;
+	    margin:auto;
+	    margin-left:2px;
+	    text-align:center;
+	    vertical-align: bottom;
+	    display: inline-block;
+
+	}
+	.bar1:hover, .bar2:hover, .bar3:hover{
+		background-color:#CEE3F6;
+	}
+	.bar1bis:hover, .bar2bis:hover, .bar3bis:hover{
+		background-color:#F52277;
+	}
+	.bar1bis
+	{
+			line-height: 70px;
+			height:70px;
+			width:85px;
+			background-color:#F781F3;
+			margin:auto;
+			margin-left:2px;
+			text-align:center;
+			vertical-align: bottom;
+			display: inline-block;
+
+	}
+	.bar2bis
+	{
+			line-height: 85px;
+			height:85px;
+			width:85px;
+			background-color:#EF78A0;
+			margin:auto;
+			margin-left:2px;
+			text-align:center;
+			vertical-align: bottom;
+			display: inline-block;
+
+	}
+	.bar3bis
+	{
+			line-height: 55px;
+			height:55px;
+			width:85px;
+			background-color:#F5A9D0;
+			margin:auto;
+			margin-left:2px;
+			text-align:center;
+			vertical-align: bottom;
+			display: inline-block;
+
+	}
+	.textcarre
+	{
+			font: 12px sans-serif;
+			color:#424242;
+	    display:inline-block;
+	    line-height:1em;
+	    vertical-align:middle;
+	}
+
+	.pad{
+
+		padding: 15px;
+	}
+	</style>
+	<head>
+		<title>Statistiques descriptives</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+		<script type="text/javascript">
+		  function resizeIframe(obj){
+		     obj.style.height = 0;
+		     obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+		  }
+		</script>
+	</head>
+
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Analyse <span>AdopteUnMec</span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="index.html">Accueil</a></li>
+				<li><a target='_blank' href="https://github.com/PierreDesmet/Analyse-AdopteUnMec#--analyse-aum--">Projet GitHub</a></li>
+				<li><a href="collect_data.html">Collecte des données</a></li>
+				<li><a href="stat_desc.html">Statistiques descriptives</a></li>
+				<li><a href="machine_learning.html">Machine learning</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Section -->
+					<section class="wrapper">
+						<div class="inner">
+							<header class="align-center">
+								<h1>Statistiques descriptives</h1>
+								<p>Dataviz interactives, indicateurs statistiques et interprétations.</p>
+							</header>
+
+							<p>Outre leurs caractéristiques physiques, qu'est-ce qui distingue les femmes des hommes ? Quelle est la "femme type" d'AdopteUnMec ? De quoi dépend la popularité d'une femme ? Quelles sont les qualités les plus recherchées chez les hommes ? Nous nous proposons de répondre ici à ces questions.  </p>
+							<h3>Comparaison hommes VS femmes</h3>
+							On se doute que le profil des visiteurs diffère d'un site de rencontre à l'autre : AdopteUnMec, Tinder, CougarAvenue, Rencontreagriculteur, etc. Encore faut-il pouvoir se faire une idée de la population féminine...et de la concurence masculine.
+							<br/><br/>
+
+							<!--Ronds-->
+							<h4>Toutes les variables</h4>
+							<p>
+							<table >
+								<tr>
+									<td align='center' colspan=3><font size=4>Les hommes viennent de Mars...</font></td>
+									<td width=20px> </td>
+									<td align='center' colspan=3><font size=4>...les femmes de Venus</font></td>
+								</tr>
+								<tr >
+									<td align='center' BGCOLOR='#FFFFFF'><img src="images/ronds/rond_10.png" onmouseover="hover(this);" onmouseout="unhover(this);" width="130px" height="130px"/>Fautes description</td>
+									<td align='center' BGCOLOR='#FFFFFF'><img src="images/ronds/rond_11.png" onmouseover="hover(this);" onmouseout="unhover(this);" width="130px" height="130px"/>Tabac / Alcool</td>
+									<td align='center' BGCOLOR='#FFFFFF'><img src="images/ronds/rond_12.png" onmouseover="hover(this);" onmouseout="unhover(this);" width="130px" height="130px"/>Piercing / Tatoo</td>
+									<td width=20px BGCOLOR='#FFFFFF'> </td>
+									<td align='center' BGCOLOR='#FFFFFF'><img src="images/ronds/rond_1.png" onmouseover="hover(this);" onmouseout="unhover(this);" width="130px" height="130px"/>Fautes description</td>
+									<td align='center' BGCOLOR='#FFFFFF'><img src="images/ronds/rond_2.png" onmouseover="hover(this);" onmouseout="unhover(this);" width="130px" height="130px"/>Tabac / Alcool</td>
+									<td align='center' BGCOLOR='#FFFFFF'><img src="images/ronds/rond_3.png" onmouseover="hover(this);" onmouseout="unhover(this);" width="130px" height="130px"/>Piercing / Tatoo</td>
+								</tr>
+								<tr>
+									<td align='center' BGCOLOR='#FFFFFF'><img src="images/ronds/rond_13.png" onmouseover="hover(this);" onmouseout="unhover(this);" width="130px" height="130px"/>Complétion du profil</td>
+									<td align='center' BGCOLOR='#FFFFFF'><img src="images/ronds/rond_14.png" onmouseover="hover(this);" onmouseout="unhover(this);" width="130px" height="130px"/>Mails</td>
+									<td align='center' BGCOLOR='#FFFFFF'><img src="images/ronds/rond_15.png" onmouseover="hover(this);" onmouseout="unhover(this);" width="130px" height="130px"/>Type de contrat recherché</td>
+									<td width=20px BGCOLOR='#FFFFFF'> </td>
+									<td align='center' BGCOLOR='#FFFFFF'><img src="images/ronds/rond_4.png" onmouseover="hover(this);" onmouseout="unhover(this);" width="130px" height="130px"/>Complétion du profil</td>
+									<td align='center' BGCOLOR='#FFFFFF'><img src="images/ronds/rond_5.png" onmouseover="hover(this);" onmouseout="unhover(this);" width="130px" height="130px"/>Charmes</td>
+									<td align='center' BGCOLOR='#FFFFFF'><img src="images/ronds/rond_6.png" onmouseover="hover(this);" onmouseout="unhover(this);" width="130px" height="130px"/>Accessibilité</td>
+								</tr>
+								<tr>
+									<td align='center' BGCOLOR='#FFFFFF'><img src="images/ronds/rond_16.png" onmouseover="hover(this);" onmouseout="unhover(this);" width="130px" height="130px"/>Poids</td>
+									<td align='center' BGCOLOR='#FFFFFF'><img src="images/ronds/rond_17.png" onmouseover="hover(this);" onmouseout="unhover(this);" width="130px" height="130px"/>Taille</td>
+									<td align='center' BGCOLOR='#FFFFFF'><img src="images/ronds/rond_18.png" onmouseover="hover(this);" onmouseout="unhover(this);" width="130px" height="130px"/>IMC</td>
+									<td width=20px BGCOLOR='#FFFFFF'> </td>
+									<td align='center' BGCOLOR='#FFFFFF'><img src="images/ronds/rond_7.png" onmouseover="hover(this);" onmouseout="unhover(this);" width="130px" height="130px"/>Poids</td>
+									<td align='center' BGCOLOR='#FFFFFF'><img src="images/ronds/rond_8.png" onmouseover="hover(this);" onmouseout="unhover(this);" width="130px" height="130px"/>Taille</td>
+									<td align='center' BGCOLOR='#FFFFFF'><img src="images/ronds/rond_9.png" onmouseover="hover(this);" onmouseout="unhover(this);" width="130px" height="130px"/>IMC</td>
+								</tr>
+							</table>
+							L'écart le plus important se situe au niveau du <font color='#EF78A1'>tabac</font> : là où une femme sur quatre annonce en consommer, aucun homme ne le reconnaît ! Un chiffre bien en deça des <a href='http://inpes.santepubliquefrance.fr/10000/themes/tabac/consommation/profils-fumeurs.asp'><b>données communiquées par l'INPES</b></a>. Peut-on y voir une dissimulation de la part des hommes, craignant de faire fuir celles qui ne supportent pas le tabac ?
+							<br/><br/>
+							Autre surprise : un homme qui contacte une femme en aura globalement approché 123 autres sur le même site ! Il ne faut donc pas espérer rencontrer la perle rare du premier coup. Le site annonce d'ailleurs une moyenne de 6 mois pour tomber sur la bonne personne (<a href='https://www.adopteunmec.com/help#tab-content-3'><b>source</b></a>).
+							De plus, une femme tirée au hasard s'est déjà fait "charmée" 193 fois en médiane, conférant au site des allures de compétition. Cela est confirmé par le <font color='#EF78A1'>pourcentage de réponses aux mails</font> envoyés par les hommes : en moyenne, seulement 1 mail sur 10 trouvera réponse.
+							<br/><br/>
+							Les femmes se dévoilent avec des <font color='#EF78A1'>descriptions</font> en moyenne de 15 mots inférieurs à celles des hommes. Peut-être sont-elles moins motivées que les hommes pour faire des rencontres sur Internet ?
+							Cette hypothèse est réaliste si l'on tient compte du fait qu'une femme a un accès gratuit au site, quand les hommes déboursent de l'ordre de 30€/mois, gage d'une certaine motivation.
+							Le fait qu'elles fassent moins attention à leur <font color='#EF78A1'>orthographe</font> corrobore cette supposition.
+							<br/><br/>
+							Les femmes sont plus nombreuses à se faire <font color='#EF78A1'>tatouer</font> et à porter des <font color='#EF78A1'>piercings</font>. Leur consommation d'<font color='#EF78A1'>alcool</font> est inférieure à celle des hommes, mais elles sont plus nombreuses à se revendiquer "pillier de bar".
+							<!--Les chiffres concernant le type de contrat qu'elles souhaitent (CDI, CDD ?) ne sont hélas pas renseignées par AdopteUnMec.-->
+							Sans surprise, elles <font color='#EF78A1'>mesurent</font> et <font color='#EF78A1'>pèsent</font> moins lourd que leurs homologues masculins, d'où un <font color='#EF78A1'>IMC</font> médian également moindre.
+						</p>
+
+						<!--Podiums-->
+						<h4>Podiums de comparaison des jobs, hobbies et sports</h4>
+						<p>
+							<table style="width:100%">
+								<!--Jobs-->
+								<tr align='center' >
+									<td colspan=2 BGCOLOR='#E6E6E6'><font size=3>Les jobs les plus représentés...</font></td>
+								</tr>
+								<tr align='center'>
+									<td BGCOLOR='#FFFFFF'>Côté homme</td>
+									<td BGCOLOR='#FFFFFF'>Côté femme</td>
+									<td BGCOLOR='#FFFFFF' style="vertical-align:middle" rowspan="2">
+										Si les étudiant(e)s et les ingénieur(e)s sont des professions bien représentées chez les deux sexes, on notera que les femmes sont davantage tournées vers le milieu médical que les hommes.
+										<!--Les métiers du secteur publique et de l'armée semblent plaire davantage aux messieurs.-->
+									</td>
+								</tr>
+								<tr>
+									<td align='center' BGCOLOR='#FFFFFF' width='270px'>
+									<!--<img src='images/podiums/podium_jobs_H.svg' width='270px'/>-->
+
+									<div class="bar2">
+											<div class="textcarre">
+												ingénieur
+											</div>
+									</div>
+									<div class="bar1">
+											<div class="textcarre">
+												étudiant
+											</div>
+									</div>
+									<div class="bar3">
+											<div class="textcarre">
+											fonctionnaire, militaire
+											</div>
+									</div>
+
+									</td>
+									<td align='center' BGCOLOR='#FFFFFF' width='270px'>
+										<!--<img src='images/podiums/podium_jobs_F.svg' width='270px'/>-->
+
+										<div class="bar2bis">
+												<div class="textcarre">
+												étudiante
+												</div>
+										</div>
+										<div class="bar1bis">
+												<div class="textcarre">
+												ingénieure, infirmière
+												</div>
+										</div>
+										<div class="bar3bis">
+												<div class="textcarre">
+												auxilliaire de puéricultrice
+												</div>
+										</div>
+									</td>
+								</tr>
+								<!--Hobbies-->
+								<tr align='center'>
+									<td colspan=2 BGCOLOR='#E6E6E6'><font size=3>Les hobbies préférés...</font></td>
+								</tr>
+								<tr align='center'>
+									<td BGCOLOR='#FFFFFF'>Côté homme</td>
+									<td BGCOLOR='#FFFFFF'>Côté femme</td>
+									<td BGCOLOR='#FFFFFF' style="vertical-align:middle" rowspan="2">
+										Pas de différence notable en ce qui concerne les loisirs, même si la pratique d'un sport régulier est plus courante chez les individus masculins.
+									</td>
+								</tr>
+								<tr>
+									<td  BGCOLOR='#FFFFFF' width='270px'>
+										<!--<img src='images/podiums/podium_hobbies_H.svg' width='270px'/>-->
+										<div class="bar2">
+												<div class="textcarre">
+												sport
+												</div>
+										</div>
+										<div class="bar1">
+												<div class="textcarre">
+												cinéma
+												</div>
+										</div>
+										<div class="bar3">
+												<div class="textcarre">
+												musique
+												</div>
+										</div>
+									</td>
+									<td align='center' BGCOLOR='#FFFFFF' width='270px'>
+										<!--<img src='images/podiums/podium_hobbies_F.svg' width='270px'/>-->
+										<div class="bar2bis">
+												<div class="textcarre">
+												cinéma
+												</div>
+										</div>
+										<div class="bar1bis">
+												<div class="textcarre">
+												musique
+												</div>
+										</div>
+										<div class="bar3bis">
+												<div class="textcarre">
+												lecture
+												</div>
+										</div>
+									</td>
+								</tr>
+								<!--Sports-->
+								<tr align='center'>
+									<td colspan=2 BGCOLOR='#E6E6E6'><font size=3>Les sports les plus pratiqués...</font></td>
+								</tr>
+								<tr align='center'>
+									<td BGCOLOR='#FFFFFF'>Côté homme</td>
+									<td BGCOLOR='#FFFFFF'>Côté femme</td>
+									<td BGCOLOR='#FFFFFF' style="vertical-align:middle" rowspan="2">
+										Le running semble être un sport unisexe ! Le fitness est - dans les grandes lignes - l'équivalent féminin de la musculation.
+										Les hommes sont plutôt foot, là où les femmes s'adonnent volontiers aux activités cyclistes et de natation.
+									</td>
+								</tr>
+								<tr>
+									<td  BGCOLOR='#FFFFFF' width='290px'>
+										<div class="bar2">
+												<div class="textcarre">
+												musculation
+												</div>
+										</div>
+										<div class="bar1">
+												<div class="textcarre">
+												foot
+												</div>
+										</div>
+										<div class="bar3">
+												<div class="textcarre">
+												running
+												</div>
+										</div>
+
+									</td>
+									<td align='center' BGCOLOR='#FFFFFF' width='290px'>
+										<div class="bar2bis">
+												<div class="textcarre">
+												fitness
+												</div>
+										</div>
+										<div class="bar1bis">
+												<div class="textcarre">
+												running
+												</div>
+										</div>
+										<div class="bar3bis">
+												<div class="textcarre">
+												piscine, vélo
+												</div>
+										</div>
+									</td>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+								</tr>
+							</table>
+					</p>
+					<br/><br/>
+
+					<!--Histogramme des mots clés des femmes-->
+					<h4>Comment se qualifient les femmes ?</h4>
+					<div class="flex flex-2">
+						<div col col1 first style='max-width:350px;'>
+							<br/><br/><br/>
+							La population féminine d'AdopteUnMec est donc essentiellement taquine, sensible et féminine. Le terme <emph>"enfant"</emph> désigne une femme qui a des enfants, ou aimerait en avoir dans un futur proche.
+							Notons que les mots clés proposés aux femmes pour ce décrire diffèrent de ceux des hommes (ci-dessous).
+						</div>
+						<div class="col col2"  style='max-width:600px;'>
+							<iframe title="Mots clés des femmes" src="images/Mots clés utilisés pour se décrire (femmes).html" width="100%" height="285"></iframe>
+						</div>
+					</div>
+
+					<!--Histogramme des mots clés des hommes-->
+					<div class="flex flex-2">
+						<div class="col col2"  style='max-width:600px;'>
+								<iframe title="Mots clés des hommes" src="images/Mots clés utilisés pour se décrire (hommes).html" width="100%" height="285"></iframe>
+						</div>
+						<div col col1  style='max-width:350px;'>
+							<br/><br/><br/>
+							Les hommes sportifs pullulent sur AdopteUnMec ! Une femme à la recherche d'un compagnon sociable ou ambitieux devrait trouver son compte sans problème.
+							Pour dénicher un ninja, en revanche, mieux vaut changer de site...
+						</div>
+					</div>
+
+					<br/><br/>
+					<h4>Séries télévisées préférées par sexe</h4>
+						<img src ='images/Séries préférées des femmes.svg' alt='séries TV' width=49%>
+						<img src ='images/Séries préférées des hommes.svg' alt='séries TV' width=49%>
+						"Game of Thrones" est l'incontestable série gagnante chez les deux sexes, pour les 19-27 ans. Les quatre séries ayant le plus de succès plaisent aux téléspectateurs quelque soit leur sexe.
+						Certaines séries ont la préférence des hommes ("Vikings", "Walking Dead"). D'autres sont surtout l'apanage des femmes ("New Girl", "Homeland"),
+					<p>
+						<br/><br/>
+
+
+					<h3>Ce que veulent les femmes</h3>
+					Il est intéressant de savoir ce qu'attend une jeune femme d'un homme en 2018.
+					<br/><br/>
+
+					<h4>Mots-clés des descriptions </h4>
+					<div class="flex flex-2">
+						<div class="col col1 first">
+							<img title="Wordcloud" src="images/Wordcloud_recherche.png" width="500px"/>
+						</div>
+						<div class="col col2" align='right' style='max-width:363px;'>
+							L'analyse des mots clés des "shopping listes" des clientes révèle que <font color='#EF78A1'>l'humour</font> fait fureur, surtout lorsqu'il est associé avec un <font color='#EF78A1'>beau regard</font> et un sourire à <font color='#EF78A1'>fossettes</font>.
+							L'<font color='#EF78A1'>honnêteté</font> est la première qualité non-physique qui ressort, loin devant l'<font color='#EF78A1'>intelligence</font>, le sens de l'<font color='#EF78A1'>aventure</font> et le <font color='#EF78A1'>romantisme</font>.
+							Donner de l'<font color='#EF78A1'>attention</font> fait également gagner des points aux messieurs.
+							Plus marginalement, aimer les <font color='#EF78A1'>animaux</font> et en particulier les <font color='#EF78A1'>chats</font> est de bon ton.
+							Dommage que les qualités culinaires ne soient pas représentées ! &#9785;
+						</div>
+					</div>
+					<br/><br/>
+						<div class="flex flex-2">
+						<div class="col col2"  style='max-width:350px;'>
+							Symétriquement, les mots clés afférant à ce que les demoiselles fuient chez les hommes sont représentés ci-contre.
+							Les <font color='#EF78A1'>machos menteurs</font>, <font color='#EF78A1'>hypocrites</font>, <font color='#EF78A1'>irrespectueux</font> et <font color='#EF78A1'>méchants</font> n'ont qu'à bien se tenir !
+							L'<font color='#EF78A1'>infidélité</font> n'est que peu mentionnée comme rédhibitoire, mais peut-être est-ce là une condition trop évidente pour être rédigée ^^.
+							Notons toutefois que les réponses données à la question "que fuyez-vous chez un homme ?" sont peu nombreuses. Ce nuage de mots clés est donc moins interprétable que le premier.
+						</div>
+						<div style='max-width:500px;'>
+							<img title="Wordcloud" src="images/Wordcloud_fuit.png" width="500px"/>
+						</div>
+					</div>
+					<br/><br/>
+
+
+					<h4>Préférences capillaires</h4>
+					L'attractivité d'un homme est mesurée en nombre de mails, c'est à dire de contacts établis avec des femmes du site. Cinq groupes d'effectifs égaux discétisent le nombre de mails échangés au sein d'une variable "étoiles".
+					Le nombre modal d'étoiles est représenté ci-dessous pour chaque combinaison couleur+style de cheveux.
+					<center>
+						<table>
+						<tr style="text-align:center">
+							<td BGCOLOR=#fff></td>
+							<td BGCOLOR=#fff>Bruns</td>
+							<td BGCOLOR=#fff>Châtains</td>
+							<td BGCOLOR=#fff>Blonds</td>
+							<td BGCOLOR=#fff>Roux</td>
+							<td BGCOLOR=#fff>Noirs</td>
+						</tr>
+						<tr>
+							<td style='vertical-align:middle'>Courts, raides</td>
+							<td BGCOLOR=#F2F2F2>
+								<div class="container_barbes">
+								<img src='images/avatars/myAvatar-9.svg'/ width=100px>
+								<div class="overlay_on_barbe">
+									<div class="text_barbe">4 étoiles</div>
+								</div>
+							</td>
+							<td BGCOLOR=#F2F2F2>
+								<div class="container_barbes">
+								<img src='images/avatars/myAvatar-15.svg'/ width=100px>
+								<div class="overlay_on_barbe">
+									<div class="text_barbe">5 étoiles</div>
+								</div>
+							</td>
+							<td BGCOLOR=#F2F2F2>
+								<div class="container_barbes">
+								<img src='images/avatars/myAvatar-4.svg'/ width=100px>
+								<div class="overlay_on_barbe">
+									<div class="text_barbe">5 étoiles</div>
+								</div>
+							</td>
+							<td BGCOLOR=#F2F2F2>
+								<div class="container_barbes">
+								<img src='images/avatars/myAvatar-3.svg'/ width=100px>
+								<div class="overlay_on_barbe">
+									<div class="text_barbe">Manque de <br/>données !</div>
+								</div>
+							</td>
+							<td BGCOLOR=#F2F2F2>
+								<div class="container_barbes">
+								<img src='images/avatars/myAvatar-10.svg'/ width=100px>
+								<div class="overlay_on_barbe">
+									<div class="text_barbe">3 étoiles</div>
+								</div>
+							</td>
+						</tr>
+						<tr >
+							<td BGCOLOR=#fff style='vertical-align:middle'>Longs, bouclés</td>
+							<td BGCOLOR=#F2F2F2>
+								<div class="container_barbes">
+								<img src='images/avatars/myAvatar-7.svg'/ width=100px>
+								<div class="overlay_on_barbe">
+									<div class="text_barbe">2 étoiles</div>
+								</div>
+							</td>
+							<td BGCOLOR=#F2F2F2>
+								<div class="container_barbes">
+								<img src='images/avatars/myAvatar-14.svg'/ width=100px>
+								<div class="overlay_on_barbe">
+									<div class="text_barbe">Manque de <br/>données !</div>
+								</div>
+							</td>
+							<td BGCOLOR=#F2F2F2>
+								<div class="container_barbes">
+								<img src='images/avatars/myAvatar-6.svg'/ width=100px>
+								<div class="overlay_on_barbe">
+									<div class="text_barbe">Manque de <br/>données !</div>
+								</div>
+							</td>
+							<td BGCOLOR=#F2F2F2>
+								<div class="container_barbes">
+								<img src='images/avatars/myAvatar.svg'/ width=100px>
+								<div class="overlay_on_barbe">
+									<div class="text_barbe">Manque de <br/>données !</div>
+								</div>
+							</td>
+							<td BGCOLOR=#F2F2F2>
+								<div class="container_barbes">
+								<img src='images/avatars/myAvatar-11.svg'/ width=100px>
+								<div class="overlay_on_barbe">
+									<div class="text_barbe">Manque de <br/>données !</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td BGCOLOR=#fff style='vertical-align:middle'>Frisés, afro</td>
+							<td BGCOLOR=#F2F2F2>
+								<div class="container_barbes">
+								<img src='images/avatars/myAvatar-8.svg'/ width=100px>
+								<div class="overlay_on_barbe">
+									<div class="text_barbe">Manque de <br/>données !</div>
+								</div>
+							</td>
+							<td BGCOLOR=#F2F2F2>
+								<div class="container_barbes">
+								<img src='images/avatars/myAvatar-13.svg'/ width=100px>
+								<div class="overlay_on_barbe">
+									<div class="text_barbe">3 étoiles</div>
+								</div>
+							</td>
+							<td BGCOLOR=#F2F2F2>
+								<div class="container_barbes">
+								<img src='images/avatars/myAvatar-5.svg'/ width=100px>
+								<div class="overlay_on_barbe">
+									<div class="text_barbe">Manque de <br/>données !</div>
+								</div>
+							</td>
+							<td BGCOLOR=#F2F2F2>
+								<div class="container_barbes">
+								<img src='images/avatars/myAvatar-2.svg'/ width=100px>
+								<div class="overlay_on_barbe">
+									<div class="text_barbe">Manque de <br/>données ! <font size=0.7>lol</font></div>
+								</div>
+							</td>
+							<td BGCOLOR=#F2F2F2>
+								<div class="container_barbes">
+								<img src='images/avatars/myAvatar-12.svg'/ width=100px>
+								<div class="overlay_on_barbe">
+									<div class="text_barbe">Manque de <br/>données !</div>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</center>
+
+					<br/>
+					<h4>Couleur des yeux</h4>
+					Si l'on s'intéresse à la <font color='#EF78A1'>couleur des yeux</font>, on constate que les yeux marrons et noirs recoivent légèrement moins de réponses à leur mails (avec pour ces derniers une incertitude liée à leur plus faible effectif).
+					De plus, les yeux noisettes et verts dominent : ainsi s'éteint le mythe des yeux bleus...
+					<iframe title="Couleurs des yeux" src="images/Couleur de yeux préférée des filles.html" width="100%" height="400">
+						<p>Votre navigateur ne supporte pas les iframes :-(</p>
+					</iframe>
+
+					<br/><br/>
+					<h4>Styles préférés des femmes</h4>
+					Selon votre style vestimentaire, auriez-vous du succès sur AdopteUnMec ?
+					<br/>
+								<iframe title="Style BCBG" src="images/styles/pie_is_BCBG.html" width="33%" height='310px'></iframe>
+								<iframe title="Style chic" src="images/styles/pie_is_chic.html" width="33%" height='310px'></iframe>
+								<iframe title="Style décontracté" src="images/styles/pie_is_décontracté.html" width="33%" height='310px'></iframe>
+								<!--<iframe title="Style branchouille" src="images/styles/pie_is_branchouille.html" width="33%" height='310px'></iframe>-->
+								<br/>
+								<iframe title="Style À l'arrache" src="images/styles/pie_is_à l'arrache.html" width="33%" height='310px'></iframe>
+								<iframe title="Style geek" src="images/styles/pie_is_geek.html" width="33%" height='310px'></iframe>
+								<iframe title="Style rock" src="images/styles/pie_is_rock.html" width="33%" height='310px'></iframe>
+								<!--<iframe title="Style sport" src="images/styles/pie_is_sport.html" width="33%" height='310px'></iframe>-->
+								<!--<iframe title="Style street" src="images/styles/pie_is_street.html" width="33%" height='310px'></iframe>-->
+								<br/>
+								L'examen de la distribution des étoiles pour les principaux styles nous apprend que :
+								<ul>
+									<li>Les styles "<font color='#EF78A1'>BCBG</font>" et "<font color='#EF78A1'>chic</font>" rencontrent le plus de succès auprès des femmes du site </li>
+									<li>Une large part des hommes se décrivent comme "<font color='#EF78A1'>décontractés</font>". Ce style semble ne pas avoir d'impact sur le nombre de mails échangés avec les internautes. </li>
+									<li>Les styles "<font color='#EF78A1'>rock</font>", "<font color='#EF78A1'>geek</font>"" et "<font color='#EF78A1'>à l'arrache</font>" sont peut-être à éviter pour qui souhaite faire de nombreuses rencontres...</li>
+								</ul>
+
+					<br/><br/>
+					Attention : beaucoup de femmes ne renseignent pas ce qu'elles recherchent sur le site. Et parmi celles qui le font, n'oublions pas qu'une femme ne dit jamais tout ce qu'elle attend...
+				</p>
+
+				<p>
+					<br/>
+					<h3>Autres curiosités statistiques</h3>
+
+					<h4>Matrice de corrélation</h4>
+					<!--Matrice de corrélation-->
+					Le corrélogramme suivant rend compte des variables <a href='https://fr.wikipedia.org/wiki/Corrélation_%28statistiques%29#Coefficient_de_corrélation_linéaire_de_Bravais-Pearson' target='_blank'><b>linéairement corrélées</b></a>. Par exemple, le "64" sur la première ligne nous apprend que plus une femme reçoit de charmes<sup>*</sup>, plus elle reçoit de mails.
+					<br/>
+					<sup>*</sup> Un "charme" est une demande de mise en relation adressée à une femme. Si la femme est intéressée, le charme devient un mail, c'est-à-dire un flux d'échanges.
+
+						<iframe title="Corrélation des variables" src="images/heatmap/heatmap.html" width="100%" height="700px" scrolling='no'>
+							<p>Votre navigateur ne supporte pas les iframes :-(</p>
+						</iframe>
+					Premier point notable, le nombre de charmes que reçoit une femme décroît selon son identifiant unique. Cela est en fait très logique : les identifiants sont attribués dans l’ordre croissant, selon le jour de l’inscription. les identifiants les plus grands témoignent d'un profil récent, qui n'a pas eu le temps d'accumuler autant de charmes que les profils anciens (avec un identifiant plus petit).
+					<br/><br/>
+					Le port d'un tatouage est corrélé avec celui d'un piercing, les deux pouvant s'interpréter comme une recherche d'originalité. Ces deux variables sont fonctions décroissantes du label (score binaire d'intérêt pour un profil) : cela signifie que les marquages corporels rebutent l'utilisateur du programme.
+					<br/><br/>
+					L'accessibilité d'une femme croît proportionnellement à son IMC, alimentant la triste idée qu'une femme avec quelques kilos au dessus de la moyenne doit revoir à la baisse ses exigences...sur cet échantillon du moins.
+
+
+					<br/><br/>
+
+
+
+					<!--Histogramme des poids des femmes-->
+					<div class="flex flex-2">
+						<div class="col col2"  style='max-width:600px;'>
+								<iframe title="Poids des femmes" src="images/Distribution des poids des femmes de 19 à 27 ans.html" width="100%" height="350">
+									<p>Votre navigateur ne supporte pas les iframes :-(</p>
+								</iframe>
+						</div>
+						<div col col1  style='max-width:350px;'>
+							<br/><br/><br/><br/><br/>
+							Cet histogramme admet une queue de distribution étonnament élevée à gauche.
+							Comment peut-il y avoir plus de femmes de 30kg que de femmes de 65kg ? C'est simple : AdopteUnMec applique une valeur par défaut de 30kg lorsque le poids n'est pas renseigné par la femme.
+						</div>
+					</div>
+
+				</p>
+
+				<!--Analyse capillaire-->
+				<!--Merci au site https://face.co pour les images d'avatars !-->
+				<div style='max-width:100%'>
+					<center>
+					<table >
+						<tr colspan=3>
+							Pilosité
+						</tr>
+						<tr BGCOLOR=#E6E6E6>
+							<td>
+									<div class="container_barbes">
+		  								<img class='img_barbe'src='images/avatar_1.svg'/ >
+		  								<div class="overlay_on_barbe">
+		    							<div class="text_barbe">Imberbes ou <br/>rasés : <br/>13%</div>
+		  						</div>
+								</div>
+							</td>
+							<td>
+								<td>
+										<div class="container_barbes">
+			  								<img class='img_barbe'src='images/avatar_2.svg'/ >
+			  								<div class="overlay_on_barbe">
+			    							<div class="text_barbe">Pilosité <br/>moyenne :<br/>83%</div>
+			  						</div>
+									</div>
+								</td>
+								<td>
+										<div class="container_barbes">
+												<img class='img_barbe'src='images/avatar_3.svg'/ >
+												<div class="overlay_on_barbe">
+													<div class="text_barbe">Ours :<br/>4%</div>
+												</div>
+									</div>
+								</td>
+						</tr>
+					</table>
+
+
+				</center>
+			</div>
+				</div>
+				</section>
+
+
+
+				</center>
+			</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="copyright">
+				<ul class="icons">
+					<li><a target="_blank" href="https://fr.linkedin.com/in/desmetpierre" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a target="_blank" href="https://github.com/PierreDesmet/Analyse-AdopteUnMec#--analyse-aum--" class="icon fa-github"><span class="label">Github</span></a></li>
+					<li><a href="mailto:pierre.desmet@ensae.fr" class="icon fa-envelope-o" ><span class="label"></span></a></li><!--<img width='35px' src='images/mail1.png'/>-->
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				</ul>
+				<p>Pierre DESMET, 2018</p>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+
+			function hover(element) {
+				element.setAttribute('id', element.src);
+				var identifiant = String(element.id).replace('.png','b.svg').replace('.png','b.svg')
+				element.setAttribute('src', identifiant);
+				/*eval(identifiant)*/
+			}
+			function unhover(element) {
+				element.setAttribute('src', element.id);
+			}
+
+			</script>
+
+	</body>
+</html>

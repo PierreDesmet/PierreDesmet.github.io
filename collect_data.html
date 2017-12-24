@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<!--
+	Urban by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Collecte des données</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Analyse <span>AdopteUnMec</span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="index.html">Accueil</a></li>
+				<li><a target='_blank' href="https://github.com/PierreDesmet/Analyse-AdopteUnMec#--analyse-aum--">Projet GitHub</a></li>
+				<li><a href="collect_data.html">Collecte des données</a></li>
+				<li><a href="stat_desc.html">Statistiques descriptives</a></li>
+				<li><a href="machine_learning.html">Machine learning</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Section -->
+					<section class="wrapper">
+						<div class="inner">
+							<header class="align-center">
+								<h1>Collecte des données</h1>
+								<p>Web scraping, constitution d'une base de données et création de variables.</p>
+							</header>
+							<div class="flex flex-2">
+								<div class="col col2">
+									<h3>Web scraping et base de données</h3>
+									<p><a href='https://github.com/PierreDesmet/Analyse-AdopteUnMec/tree/master/Profils' target='_blank'><b>300 profils de femmes</b></a> ont été enregistrés au format HTML. Certains d'entre eux plairont à l'utilisateur du programme (les "positive sample"), d'autres non (les "negative samples").
+										 Ces deux catégories de profils sont séparées dans deux dossiers disjoints.	Les informations recoltées sont celles de femmes de la région parisienne ayant entre 19 et 27 ans.</p>
+									<p>Les variables suivantes ont ainsi été stockées dans une base :
+										<ul>
+											<li><font color=#EF78A1>Informations d'ordre général</font> : âge, ville, université/métier, une description textuelle.</li>
+											<li><font color=#EF78A1>Attributs physiques</font> : taille, poids, couleur des yeux et des cheveux, origine, style, tatouage et piercing.</li>
+											<li><font color=#EF78A1>Des variables de goût</font> : hobbies, sport, films/séries, livres, tabac, alcool, préférences sexuelles et physiques.</li>
+										</ul>
+									</p>
+
+								</div>
+								<div class="col col1 first">
+										<br/><br/>
+										<img width=295px src="images/scraping.png" alt="schéma parsing" />
+								</div>
+							</div>
+							<p>
+								Un prétraitement sur les variables a alors été effectué. Les types de données ont été corrigés (entiers, chaînes de caractères, booléens, etc.). Les titres des séries et des films ont été harmonisés (orthographe, casse), et les caractères spéciaux supprimés.
+							</p>
+							<div class="flex flex-2">
+								<div class="col col1">
+									<br/><br/><br/><br/><br/><br/>
+										<img src="images/silhouette.png" width=320px alt="" />
+								</div>
+								<div class="col col2">
+									<br/>
+									<p>
+										<h3>Création de nouvelles variables</h3>
+												Enfin, les caractéristiques existantes ont permis de dériver de nouvelles variables :
+											<ul>
+												<li>Le pourcentage de messages reçus auxquels la femme a donné suite ;</li>
+												<li>La longueur de la description, en nombre de lettres et de mots ;</li>
+												<li>L'<a href='https://fr.wikipedia.org/wiki/Indice_de_masse_corporelle' target="_blank">Indice de Masse Corporelle</a>, rapport du poids sur le carré de la taille en cm ;</li>
+												<li>Si la fille a redoublé, c'est-à-dire si elle étudie encore à 23 ans (rares sont les doctorantes sur AdopteUnMec...) ;</li>
+												<li>Le nombre de séries en commun, gages de goûts similaires entre la femme et l'utilisateur du programme ;</li>
+												<li>La distance à l'appartement de l'utilisateur du programme, en km ;</li>
+												<li>Le pourcentage de fautes d'orthographe commises dans la description, au regard de sa longueur ;</li>
+												<li>Si la femme a un emploi qui l'occupe la nuit (infirmière, barmaid, etc.).</li>
+											</ul>
+									</p>
+
+								</div>
+							</div>
+
+							<p>L'ensemble de ces étapes est documenté dans <a href='https://github.com/PierreDesmet/Analyse-AdopteUnMec/blob/master/1%20-%20Constitution%20de%20la%20base.ipynb'><b>le github dédié</b></a>. Le rendu final est donné pour les 3<sup>ers</sup> profils féminins recueillis :
+								<div style="padding:1px; border:2px ridge #d04cdc;">
+									<iframe title="Data.head(3)" src="data_head.html" width="100%" height="290px" scrolling='yes'></iframe>
+								</div>
+								<br/><br/>
+								Certaines variables ont été volontairement occultées (l’alimentation, les livres préférés…) car ne présentent que peu d'intérêt pour la partie <a href='machine_learning.html'><b>Machine Learning</b></a>.
+								En effet, on admettra qu'elles sont rarement discriminantes pour prédire l'intérêt d'un homme pour une femme.
+								Enfin, le label est une variable binaire valant 1 si le profil a intéressé l'utilisateur du programme, 0 sinon.
+							</p>
+						</div>
+					</section>
+
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="copyright">
+						<ul class="icons">
+							<li><a target="_blank" href="https://fr.linkedin.com/in/desmetpierre" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a target="_blank" href="https://github.com/PierreDesmet/Analyse-AdopteUnMec#--analyse-aum--" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="mailto:pierre.desmet@ensae.fr" class="icon fa-envelope-o" ><span class="label"></span></a></li><!--<img width='35px' src='images/mail1.png'/>-->
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						</ul>
+						<p>Pierre DESMET, 2018</p>
+					</div>
+				</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<!--
+	Urban by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Machine learning</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Analyse <span>AdopteUnMec</span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="index.html">Accueil</a></li>
+				<li><a target='_blank' href="https://github.com/PierreDesmet/Analyse-AdopteUnMec#--analyse-aum--">Projet GitHub</a></li>
+				<li><a href="collect_data.html">Collecte des données</a></li>
+				<li><a href="stat_desc.html">Statistiques descriptives</a></li>
+				<li><a href="machine_learning.html">Machine learning</a></li>
+				<!--<li><a href="elements.html">Elements</a></li>-->
+			</ul>
+		</nav>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Section -->
+					<section class="wrapper">
+						<div class="inner">
+							<header class="align-center">
+								<h1>Machine learning</h1>
+								<p>Et si l'on pouvait prédire à l'avance une belle histoire ?</p>
+								<center>
+									<div style="padding:3px; border:8px ridge #d04cdc;">
+										<iframe title="IHM de prédiction" src="images/Reporting.html" width="100%" height="350">
+				  						<p>Votre navigateur ne supporte pas les iframes :-(</p>
+										</iframe>
+									</div>
+									<br/>
+									Interface graphique de prédiction.
+									<a target='_blank' href="images/Reporting.html">
+										<i>Ouvrir en plein écran</i>
+										<br/>Un flou a été appliqué pour respecter l'anonymat des femmes.
+									</a>
+								</center>
+							</header>
+
+								<p>
+								Traditionnellement, l'utilisateur d'un site de rencontre renseigne ses préférences afin d'afficher les profils qui y corespondent.
+								Ces profils filtrés peuvent être très nombreux, d'autant plus qu'il en arrive de nouveaux en continu, tous les jours.
+								<b>Leur consultation est est une activité chronophage qu'il est en outre difficile de rendre exhaustive. </b>
+
+								<br/><br/>
+								On se propose donc d'automatiser la recherche au sein d'une interface interactive.
+								Celle-ci peut parcourir quotidiennement les <i>n</i> nouvelles femmes inscrites, et affiche <b>uniquement celles dont la probabilité de plaire à l'utilisateur est grande<sup>*</sup></b>.
+
+								<br/><br/>
+								L'exemple ci-dessus présente 8 profils parsés et classés par probabilité décroissante d'intérêt de l'utilisateur. Ce dernier sait alors <b>dans quel ordre consulter les profils.</b> Libre à lui d'utiliser des crédits pour entrer en contact avec les demoiselles.
+
+								<br/><br/><sup>*</sup>"grande" est un seuil arbitraire laissé au choix de l'utilisateur du programme.
+
+								<br/><br/><br/><br/>
+								<h2>Comment générer votre interface de prédiction</h2>
+								<div class='row'>
+									<div class='6u 12u$(small)'>
+										<h4>Ingrédients </h4>
+										Pour générer votre propre interface de prédiction il vous faut :
+										<ul>
+											<li>Une connexion internet ;</li>
+											<li>Un compte AdopteUnMec, éventuellement factice ;</li>
+											<li>L'application <a href='http://jupyter.org/install.html'>Jupyter ;</a></li>
+											<li>De la patience pour labeliser à la main les profils de l'échantillon d'entraînement avec des 0 ou des 1 ;)</li>
+										</ul>
+									</div>
+									<div class='6u 12u$(small)'>
+										<h4>Étapes</h4>
+										<ol>
+											<li> <a href='#step1' ><font color='blue'>Le labeling des profils</font></a></li>
+											<li><a href='#step2' ><font color='blue'>La formation d'une base Excel contenant les profils féminins sous forme structurée et requêtable</font></a></li>
+											<li><a href='#step3' ><font color='blue'>L'entraînement de votre modèle de prédiction</font></a></li>
+											<li><a href='#step4' ><font color='blue'>Le scrapping des profils du jour et la prédiction d'un match pour chacun d'eux au sein d'une interface</font></a></li>
+										</ol>
+									</div>
+								</div>
+								<h3 id='step1'>Étape 1 : la labelisation des données</h3>
+								Commencez par télécharger le projet sur le github dédié (~350Mo) : <a target="_blank" href="https://github.com/PierreDesmet/Analyse-AdopteUnMec">https://github.com/PierreDesmet/Analyse-AdopteUnMec</a>.<br/>
+								Le dossier <i>Profils</i> contient les profils scrappés de femmes au format html.
+								Il suffit de les répartir dans les sous-dossiers <i>Positives samples</i> (pour ceux qui vous plaisent) et dans le dossier <i>Negatives samples</i> (pour les autres).
+								Vous pouvez bien sûr ajouter de nouveaux profils html en les enregistrant directement depuis le site. Ou en supprimer si vous ne vous sentez pas de labeliser la totalité des profils.
+								<br/><br/>
+
+
+								<h3 id='step2'>Étape 2 : la formation d'une base Excel</h3>
+								Ouvrir avec Jupyter le notebook <a href='https://github.com/PierreDesmet/Analyse-AdopteUnMec/blob/master/1%20-%20Constitution%20de%20la%20base.ipynb'>1 - Collecte des données.ipynb</a>. Y renseigner vos séries préférées (tout en haut), ainsi que les coordonnées GPS de votre ville (<a href='https://www.coordonnees-gps.fr'>https://www.coordonnees-gps.fr</a>).
+								Cela permet d'avoir des recommandations personnalisées de femmes ayant des séries en commun et qui résident à proximité de votre ville.
+								<br/><br/>
+								Exécuter le notebook (bouton "Run all"). Pour 300 profils par exemple, le temps d'exécution est inférieur à une minute.
+								À l'issue de cette étape est créé un classeur Excel "data_Femmes.xls" dans le dossier <i>Données</i>.
+								Il contient les caractéristiques des femmes, en plus de nouvelles variables (voir <a target='_blank' href='collect_data.html'><b>Collecte des données</b></a>).
+								Les profils que vous avez validés sont annotés d'un label "1", les autres d'un "0".
+								<div style="padding:1px; border:2px ridge #d04cdc;">
+									<iframe title="Data.head(3)" src="data_head.html" width="100%" height="290px" scrolling='yes'></iframe>
+								</div><center> <br/><i>Aperçu pour les 3<sup>ères</sup> lignes de l'Excel exemple.</i></center>
+
+								<br/><br/>
+								<h3 id='step3'> Étape 3 : l'entraînement de votre propre modèle de prédiction</h3>
+								Le modèle va apprendre de lui-même les règles de sélection qui sont les vôtres. Par exemple, le tryptique tatouage + cigarette + piercing vous est peut-être rédhibitoire...
+								Ouvrir le notebook <a href='https://github.com/PierreDesmet/Analyse-AdopteUnMec/blob/master/3%20-%20Machine%20learning.ipynb'> 3 - Machine Learning.ipynb</a> et l'exécuter intégralement.<br/>
+								Les actions qu'il réalise sont les suivantes :
+								<div class="flex flex-2">
+									<div class="col col2">
+									<ol>
+										<li>Traitement des données manquantes</li>
+										<li>Split en échantillons Train et Valid</li>
+										<li>Label encoding et normalisation des données</li>
+										<li>Entraînement d'un modèle de gradient boosting (XGBoost)</li>
+										<li>Calibrage des méta-paramètres du modèle par Random Search</li>
+										<li>Métriques de performance et feature importance</li>
+									</ol>
+								</div>
+								<div class="col col1 first" >
+									<table>
+									<tr><td BGCOLOR='#FFFFFF' align='center'><img src='images/brain.png' width='120px'/>
+									<span class='comic' >Train in progress...</span>
+									<img src='images/loader_heart.gif'/></td></tr>
+								</table>
+								</div>
+							</div>
+								Pour les détails techniques d'implémentation, c'est <a target="_blank" href='https://github.com/PierreDesmet/Analyse-AdopteUnMec/blob/master/3%20-%20Machine%20learning.ipynb'><b>par ici</b></a> !
+
+								<br/><br/>
+								<!--<div class="flex flex-2">
+									<div class="col col2" style='max-width:460px;'>
+										À l'issue de cette phase est créé un modèle Modèle_1.pkl dans le dossier <i>Pickles</i>. On peut voir ce fichier comme un livre répertoriant tout ce que vous recherchez chez une femme.
+										Le graphique "Feature importance" (à la fin du notebook) donne pour chaque variable sa relative importance pour prédire le label. Les variables dont les barres sont les plus hautes correspondent à des critères que vous recherchez (ou évitez !) absolument ;
+										celles avec une petite barre sont les variables pour lesquelles vous accordez moins d'importance. L'occasion d'en apprendre plus sur vous-même 😊
+									</div>
+									<div class="col col1 first" style='max-width:400px;'>
+										<img class='image'src='images/Feature importance.svg' width='350px'>
+									</div>
+								</div>-->
+
+								<center>
+								<table style="width:100%;">
+									<tr>
+										<td style='vertical-align:middle;' BGCOLOR='#fff'>
+											À l'issue de cette phase est créé un modèle Modèle_1.pkl dans le dossier <i>Pickles</i>. On peut voir ce fichier comme un livre répertoriant tout ce que vous recherchez chez une femme.
+											Le graphique "Feature importance" (à la fin du notebook) donne pour chaque variable sa relative importance pour prédire le label. Les variables dont les barres sont les plus hautes correspondent à des critères que vous recherchez (ou évitez !) absolument ;
+											celles avec une petite barre sont les variables pour lesquelles vous accordez moins d'importance. L'occasion d'en apprendre plus sur vous-même 😊
+										</td BGCOLOR='#fff'>
+										<td style='vertical-align:top;' BGCOLOR='#fff'>
+											<img src='images/Feature importance.svg' width='460px'>
+										</td>
+									</tr>
+								</table>
+							</center>
+
+
+
+
+								<br/><br/><br/>
+								<h3 id='step4'> Étape 4 : les prédictions sur de nouveaux profils</h3>
+								Pour prédire la probabilité P("le profil me plaît"), créer à la racine du projet un fichier identifiants.txt. Il contient votre pseudo AdopteUnMec sur la première ligne, et votre mot de passe sur la deuxième.
+								Cela va permettre au notebook de se connecter sur le site, et d'en récupérer les informations des profils féminin du jour.<br/><br/>
+
+								Ouvrir le notebook <a href="https://github.com/PierreDesmet/Analyse-AdopteUnMec/blob/master/4%20-%20Interface%20graphique%20de%20prédiction.ipynb">4 - Interface graphique de prédiction.ipynb</a>.
+								Sur AdopteUnMec, cliquez sur un profil du jour (mis en avant sur la page d'accueil), au hasard.
+								Recopiez l'identifiant unique de la demoiselle dans la variable <i>id_max</i>, en haut du notebook. Par exemple : <img src='images/exemple_id.png' height=30px><br/>
+								Renseignez le nombre maximal de profils que vous souhaitez analyser au quotidien (variable <i>nb_profils_souhaités</i>). Exécutez l'ensemble du notebook avec un "run all".
+								L'interface graphique est créée ! Le fichier <i>Reporting.html</i> présente les profils dont il est probable qu'ils retiennent votre attention. Un clic sur un profil vous redirige vers le site, où vous êtes alors prêt à entamer la discussion !
+								<br/><br/><br/>
+							</p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="copyright">
+				<ul class="icons">
+					<li><a target="_blank" href="https://fr.linkedin.com/in/desmetpierre" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a target="_blank" href="https://github.com/PierreDesmet/Analyse-AdopteUnMec#--analyse-aum--" class="icon fa-github"><span class="label">Github</span></a></li>
+					<li><a href="mailto:pierre.desmet@ensae.fr" class="icon fa-envelope-o" ><span class="label"></span></a></li><!--<img width='35px' src='images/mail1.png'/>-->
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				</ul>
+				<p>Pierre DESMET, 2018</p>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<!--
+	Urban by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Analyse AdopteUnMec</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<div class="logo"><a href="index.html">Analyse <span>AdopteUnMec</span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Accueil</a></li>
+					<li><a target='_blank' href="https://github.com/PierreDesmet/Analyse-AdopteUnMec#--analyse-aum--">Projet GitHub</a></li>
+					<li><a href="collect_data.html">Collecte des données</a></li>
+					<li><a href="stat_desc.html">Statistiques descriptives</a></li>
+					<li><a href="machine_learning.html">Machine learning</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<header>
+						<h1 style="font-family:cursive;">Rencontre avec AdopteUnMec</h1>
+						<p>Exploration des données publiques d'un site de rencontre
+						   <br/>Modélisation des préférences individuelles</p>
+					</header>
+					<a href="#main" class="button big scrolly">En savoir plus</a>
+				</div>
+			</section>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Section -->
+					<section class="wrapper style1">
+						<div class="inner">
+							<!-- 2 Columns -->
+								<div class="flex flex-2">
+									<div class="col col1">
+										<br/><br/>
+										<div class="image fit">
+											<a href="generic.html" class="link"><img src="images/pic07.jpg" alt="" /></a>
+										</div>
+										<div class="image fit">
+											<a href="generic.html" class="link"><img src="images/pic06.jpg" alt="" /></a>
+										</div>
+									</div>
+									<div class="col col2">
+										<h3>Motivations</h3>
+										<p>Pour répondre aux demandes de leurs utilisateurs toujours plus exigeants, les sites de rencontres s'adaptent et proposent aujourd'hui de rechercher sa moitié selon une <em>large gamme de critères</em>. L'ennui, c'est que les critères de recherche sont pondérés différemment selon les individus. Certains recherchent avant tout un <em>physique</em>, quand d'autres accordent davantage d'importance à un <em>niveau d'étude</em>, à une <em>religion en commun</em> ou encore à la <em>proximité géographique</em>.
+										</p>
+										<p>
+											Prenons l'un d'eux en particulier : <a target="_blank" href="https://www.adopteunmec.com">AdopteUnMec</a>. Son moteur de recherche ne permet pas de filtrer automatiquement :
+											<ul>
+												<li>Les profils qui commettent trop de fautes d'orthographe dans la description ;</li>
+												<li>Les profils "trop populaires" auprès des hommes, et donc inaccessibles à la plupart d'entre-eux ;</li>
+												<li>Les femmes qui ne se donnent pas la peine de renseigner une description ;</li>
+											  <li>Les femmes qui ont quitté le site depuis des mois ;</li>
+											</ul>
+											Et pour couronner le tout, la recherche d'une âme soeur sur ce site est une activité chronophage.
+										</p>
+										<!--<a href="#" class="button">Learn More</a>-->
+									</div>
+								</div>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section class="wrapper style2">
+						<div class="inner">
+							<div class="flex flex-2">
+								<div class="col col2">
+									<h3>Objectifs du projet</h3>
+									<p>D'où l'idée d'entraîner un modèle qui attribuerait des scores à chaque profil féminin. Ces scores dépendraient des informations renseignées par les femmes, et traduiraient la probabilité des profils à retenir l'attention d'un homme donné. L'"homme donné" n'aurait ainsi plus qu'à consulter les profils avec un score supérieur à 95% (voire moins selon son niveau de désespoir), économisant par là même son précieux temps. L’intérêt de la partie Machine Learning est donc de prédire, pour n’importe quel homme, les femmes qui ont le plus de chance de lui plaire.
+									</p>
+
+									<!--<a href="#" class="button">Learn More</a>-->
+								</div>
+								<div class="col col1 first">
+
+									<!--<div class="image">-->
+									 <img style='width:270px' src="images/tri_choice.png" alt="Comment choisir sa dulcinée ?" />
+								 <!--</div>-->
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+
+
+				<!-- Section -->
+					<section class="wrapper style1">
+						<div class="inner">
+							<header class="align-center">
+								<h2>De la collecte à la prédiction...</h2>
+								<p>Un projet marqué par trois grandes étapes : </p>
+							</header>
+							<div class="flex flex-3">
+								<div class="col align-center">
+									<div class="image round fit">
+										<div class = 'container_in_overlay'>
+											<img src="images/pic08.jpg" alt="" />
+											<div class='on_overlay'>
+												<div class='text_on_overlay'>
+													<a href="collect_data.html"><font color='white'>Collecte des données</font></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Collecte des profils, insersion dans une base de données, et enrichissement de la base avec de nouvelles variables.</p>
+									<a href="collect_data.html" class="button">En savoir plus</a>
+								</div>
+								<div class="col align-center">
+									<div class="image round fit">
+										<div class = 'container_in_overlay'>
+										<img src="images/pic05.jpg" alt="" />
+											<div class='on_overlay'>
+												<div class='text_on_overlay'>
+													<a href="stat_desc.html" ><font color='white'>Statistiques descriptives</font></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Description des profils féminins et masculins à l'aide d'indicateurs statistiques et de représentations visuelles interactives.</p>
+									<a href="stat_desc.html" class="button">En savoir plus</a>
+								</div>
+								<div class="col align-center">
+									<div class="image round fit">
+										<div class = 'container_in_overlay'>
+											<img src="images/pic04.jpg" alt="" />
+											<div class='on_overlay'>
+												<div class='text_on_overlay'>
+													<a href="machine_learning.html" ><font color='white'>Machine Learning</font></a>
+													</div>
+											</div>
+									</div>
+								</div>
+									<p>Entraînement d'un modèle de machine learning pour prédire les profils intéressant le plus un utilisateur, avec interface web.</p>
+									<a href="machine_learning.html" class="button">En savoir plus</a>
+								</div>
+							</div>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					<ul class="icons">
+						<li><a target="_blank" href="https://fr.linkedin.com/in/desmetpierre" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a target="_blank" href="https://github.com/PierreDesmet/Analyse-AdopteUnMec#--analyse-aum--" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="mailto:pierre.desmet@ensae.fr" class="icon fa-envelope-o" ><span class="label"></span></a></li><!--<img width='35px' src='images/mail1.png'/>-->
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					</ul>
+					<p>Pierre DESMET, 2018</p>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
