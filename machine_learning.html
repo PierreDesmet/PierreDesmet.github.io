@@ -77,7 +77,7 @@
 										<h4>Ingrédients </h4>
 										Pour générer votre propre interface de prédiction il vous faut :
 										<ul>
-											<li>Une connexion internet ;</li>
+											<li>Une connexion internet avec Firefox ;</li>
 											<li>Un compte AdopteUnMec, éventuellement factice ;</li>
 											<li>L'application <a href='http://jupyter.org/install.html'>Jupyter ;</a></li>
 											<li>De la patience pour labeliser à la main les profils de l'échantillon d'entraînement avec des 0 ou des 1 ;)</li>
@@ -94,22 +94,24 @@
 									</div>
 								</div>
 								<h3 id='step1'>Étape 1 : la labelisation des données</h3>
-								Commencez par télécharger le projet sur le github dédié (~350Mo) : <a target="_blank" href="https://github.com/PierreDesmet/Analyse-AdopteUnMec">https://github.com/PierreDesmet/Analyse-AdopteUnMec</a>.<br/>
+								Commencez par télécharger le projet depuis le github dédié (~350Mo) : <a target="_blank" href="https://github.com/PierreDesmet/Analyse-AdopteUnMec">https://github.com/PierreDesmet/Analyse-AdopteUnMec</a>.<br/>
 								Le dossier <i>Profils</i> contient les profils scrappés de femmes au format html.
 								Il suffit de les répartir dans les sous-dossiers <i>Positives samples</i> (pour ceux qui vous plaisent) et dans le dossier <i>Negatives samples</i> (pour les autres).
 								Vous pouvez bien sûr ajouter de nouveaux profils html en les enregistrant directement depuis le site. Ou en supprimer si vous ne vous sentez pas de labeliser la totalité des profils.
 								<br/><br/>
-
-
-								<h3 id='step2'>Étape 2 : la formation d'une base Excel</h3>
-								Ouvrir avec Jupyter le notebook <a href='https://github.com/PierreDesmet/Analyse-AdopteUnMec/blob/master/1%20-%20Constitution%20de%20la%20base.ipynb'>1 - Collecte des données.ipynb</a>.
-								Y renseigner vos séries préférées (tout en haut), ainsi que les coordonnées GPS de votre ville (<a href='https://www.coordonnees-gps.fr'>https://www.coordonnees-gps.fr</a>).
+								Ouvrir l'excel <a href='https://github.com/PierreDesmet/Analyse-AdopteUnMec/blob/master/Infos_perso.xlsx'>Infos_perso.xlsx</a>. Y renseigner vos séries préférées (tout en haut), ainsi que les coordonnées GPS de votre ville (<a href='https://www.coordonnees-gps.fr'>https://www.coordonnees-gps.fr</a>).
 								Cela permet d'avoir des recommandations personnalisées de femmes ayant des séries en commun et qui résident à proximité de votre lieu d'habitation.
 								<br/><br/>
-								Exécuter le notebook (bouton "Run all"). Pour 300 profils par exemple, le temps d'exécution est inférieur à une minute.
+								<center><img src='images/Infos_perso.png' style='width:80%;'/><br/><i>Vue du fichier Infos_perso.xlsx</i></center>
+								<br/><br/><br/>
+
+								<h3 id='step2'>Étape 2 : la formation d'une base Excel</h3>
+								Ouvrir avec Jupyter le notebook <a href='https://github.com/PierreDesmet/Analyse-AdopteUnMec/blob/master/1%20-%20Constitution%20de%20la%20base.ipynb'>1 - Collecte des données.ipynb</a> et l'exécuter (bouton "Run all").
+								Pour 300 profils par exemple, le temps d'exécution est inférieur à une minute.
 								À l'issue de cette étape est créé un classeur Excel "data_Femmes.xls" dans le dossier <i>Données</i>.
 								Il contient les caractéristiques des femmes, en plus de nouvelles variables (voir <a target='_blank' href='collect_data.html'><b>Collecte des données</b></a>).
 								Les profils que vous avez validés sont annotés d'un label "1", les autres d'un "0".
+								<br/><br/>
 								<div style="padding:1px; border:2px ridge #d04cdc;">
 									<iframe title="Data.head(3)" src="data_head.html" width="100%" height="290px" scrolling='yes'></iframe>
 								</div><center> <br/><i>Aperçu pour les 3<sup>ères</sup> lignes de l'Excel exemple.</i></center>
