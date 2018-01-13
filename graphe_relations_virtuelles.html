@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<!--
+	Urban by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Graphe des relations virtuelles</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Analyse <span>AdopteUnMec</span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+			<!-- Nav -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="index.html">Accueil</a></li>
+						<li><a href="collect_data.html">1 - Collecte des données</a></li>
+						<li><a href="stat_desc.html">2 - Statistiques descriptives</a></li>
+						<li><a href="machine_learning.html">3 - Machine learning</a></li>
+						<li><a href="graphe_relations_virtuelles.html">Graphe des relations virtuelles</a></li>
+						<li><a target='_blank' href="https://github.com/PierreDesmet/Analyse-AdopteUnMec#--analyse-aum--">Projet GitHub</a></li>
+					</ul>
+				</nav>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Section -->
+					<section class="wrapper">
+						<div class="inner">
+							<header class="align-center">
+								<h1>Graphe des relations virtuelles</h1>
+								<p>Un homme qui discute avec une femme sur un site de rencontres est en droit de se demander : i) si la femme discute en même temps avec d’autres hommes et ii) si oui, avec combien d’hommes à la fois, et quels hommes lui font concurrence. Le graphe suivant fournit une ébauche de réponse à ces interrogations. Il est produit à partir du profil de 300 hommes et de leurs relations. </p>
+								<center>
+
+										<iframe title="IHM de prédiction" src="images/sous_graphes/HommesQuiParlentAPlrsFemmes.html" width="100%" height="350">
+				  						<p>Votre navigateur ne supporte pas les iframes :-(</p>
+										</iframe>
+
+									<br/>
+									Cliquez sur les noeuds après vous être connecté au site pour voir le profil d’un célibataire.
+									<a target='_blank' href="images/sous_graphes/HommesQuiParlentAPlrsFemmes.html">
+										<br/><i>Ouvrir en plein écran</i>
+									</a>
+										<br/>
+
+								</center>
+							</header>
+
+							<p>
+								Un noeud correspond à un célibataire (ou à un individu en couple libre...). Les arêtes montrent des échanges de messages entre deux individus.
+								Ce graphe étant plutôt chargé, on se propose pour simplifier l’analyse de le disséquer en sous-graphes pertinents.
+							</p>
+
+
+							<h3>Les hommes qui n'ont pas d'échange</h3>
+							<center>
+								<table style="width:100%;">
+								<tr>
+									<td style='vertical-align:middle;' BGCOLOR='#fff'>
+										Certains hommes ne conversent avec personne. Peut-être parce qu'ils viennent d'arriver et n'ont pas eu le temps d’entamer une discussion.
+										Ou peut-être sont-ils trop timides, ou trop exigeants. Ces internautes représentent <font color='red'>1/xème</font> de la population masculine.
+										Pour eux, payer un abonnement n’est pas rentable car ils ne profitent pas des fonctionnalités du site.
+									</td >
+									<td style='vertical-align:top;' BGCOLOR='#fff'>
+										<iframe title="IHM de prédiction" src="images/sous_graphes/HommesSeuls.html" width="300px" height="350"></iframe>
+									</td>
+								</tr>
+								</table>
+								</center>
+								<h3>Les hommes qui parlent avec une unique femme</h3>
+								<center>
+								<table style="width:100%;">
+								<tr>
+									<td style='vertical-align:middle;' BGCOLOR='#fff'>
+										Les hommes qui ne parlent qu’à une seule femme à la fois se font rares. La plupart ont plusieurs pistes en cours.
+										Les individus ci-contre sont peut-être des âmes-soeurs, autant assorties que les chaussettes d'une paire.
+										Ou peut-être correspondent-ils à des profils marginaux, par exemple, deux nains roux qui se seraient trouvés ?
+									</td >
+									<td style='vertical-align:middle;' BGCOLOR='#fff'>
+										<iframe title="IHM de prédiction" src="images/sous_graphes/HommesQuiParlentAUneSeuleFemme.html" width="300px" height="350"></iframe>
+									</td>
+								</tr>
+							</table>
+						</center>
+						<h3>Les hommes qui parlent avec plus d'une femme</h3>
+						<center>
+							<table style="width:100%;">
+							<tr>
+								<td style='vertical-align:middle;' BGCOLOR='#fff'>
+									Il apparaît que les hommes discutent en moyenne avec 4 femmes ! De plus, notons qu’AdopteUnMec masque le nombre de contacts que peut avoir un homme lorsque celui-ci est supérieur à 4.
+									Cela afin d’empêcher une réputation de « coureur », laquelle pourrait freiner d’éventuelles nouvelles intéressées (hypothèse).
+									Potentiellement, certains hommes jonglent de front avec 5, 6 voire une dizaine de conversations en parallèle.
+								</td>
+								<td style='vertical-align:middle;text-align:center' BGCOLOR='#fff'>
+									<iframe title="IHM de prédiction" src="images/sous_graphes/HommesQuiParlentAPlrsFemmes.html" width="550px" height="350"></iframe>
+									<a target='_blank' href="images/sous_graphes/HommesQuiParlentAPlrsFemmes.html">
+										<br/><i>Ouvrir en plein écran</i>
+									</a>
+								</td>
+							</tr>
+						</table>
+					</center>
+					<h3>Les femmes qui parlent avec un unique homme</h3>
+					<center>
+						<table style="width:100%;">
+						<tr>
+							<td style='vertical-align:middle;' BGCOLOR='#fff'>
+								Contrairement aux hommes, les femmes semblent préférer gérer une discussion à la fois.
+								Elles se concentrent en effet principalement dans ce graphe...
+							</td>
+							<td style='vertical-align:middle;text-align:center' BGCOLOR='#fff'>
+								<iframe title="IHM de prédiction" src="images/sous_graphes/FemmesQuiParlentAUnSeulHomme.html" width="550px" height="350"></iframe>
+								<a target='_blank' href="images/sous_graphes/FemmesQuiParlentAUnSeulHomme.html">
+									<br/><i>Ouvrir en plein écran</i>
+								</a>
+							</td>
+						</tr>
+					</table>
+				</center>
+				<h3>Les femmes qui parlent avec plusieurs hommes</h3>
+				<center>
+					<table style="width:100%;">
+					<tr>
+						<td style='vertical-align:middle;' BGCOLOR='#fff'>
+							...et sont relativement peu représentées dans ce dernier graphe. On pourrait un peu rapidement conclure que les hommes préfèrent la <i>quantité</i> là où les femmes sont plus orientées <i>qualité</i>.
+						</td>
+						<td style='vertical-align:middle;text-align:center' BGCOLOR='#fff'>
+							<iframe title="IHM de prédiction" src="images/sous_graphes/FemmesQuiParlentAPlrsHommes.html" width="550px" height="350"></iframe>
+							<a target='_blank' href="images/sous_graphes/FemmesQuiParlentAPlrsHommes.html">
+								<br/><i>Ouvrir en plein écran</i>
+							</a>
+						</td>
+					</tr>
+				</table>
+			</center>
+
+			<br/><br/>
+			<h2>Quelques pattern remarquables...</h2>
+			<center>
+				<table style="width:100%;">
+					<tr style='text-align:center' >
+						<td BGCOLOR=#fff><img src='images/sous_graphes/monopole_temporaire.png' height='60px'/></td>
+						<td BGCOLOR=#fff><img src='images/sous_graphes/triangle_amoureux.png' height='60px'/></td>
+						<td BGCOLOR=#fff><img src='images/sous_graphes/harem_local.png' height='60px'/></td>
+						<td BGCOLOR=#fff><img src='images/sous_graphes/femme_populaire.png' height='60px'/></td>
+					</tr>
+					<tr>
+						<td><b>Monopole temporaire</b><br/>Quand un homme a l'exlusivité totale d'une conversation avec une internaute.</td>
+						<td><b>Triangle amoureux</b><br/>Quand deux hommes se disputent (sans le savoir) une femme...ou l'inverse.</td>
+						<td><b>Harem local</b><br/>Quand un homme converse seul avec 4 femmes ou plus.</td>
+						<td><b>Femme populaire</b><br/>Quand une femme est le dénominateur commun aux relations de plusieurs hommes.</td>
+					</tr>
+			</table>
+		</center>
+
+		<br/><br/>
+		<b>Remarque finale</b> : ces graphes sont valables à l’instant où il ont été produits.
+		Si les relations évoluent, il faut relancer <a href='https://github.com/PierreDesmet/Analyse-AdopteUnMec/blob/master/5%20-%20Graphe%20des%20relations%20virtuelles.ipynb'><u>le notebook</u></a> pour en obtenir une vue actualisée.
+						</div>
+					</section>
+			</div>
+
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="copyright">
+				<ul class="icons">
+					<li><a target="_blank" href="https://fr.linkedin.com/in/desmetpierre" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a target="_blank" href="https://github.com/PierreDesmet/Analyse-AdopteUnMec#--analyse-aum--" class="icon fa-github"><span class="label">Github</span></a></li>
+					<li><a href="mailto:pierre.desmet@ensae.fr" class="icon fa-envelope-o" ><span class="label"></span></a></li><!--<img width='35px' src='images/mail1.png'/>-->
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				</ul>
+				<p>Pierre DESMET, 2018</p>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
